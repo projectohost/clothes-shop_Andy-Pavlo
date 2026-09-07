@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AURA — Premium Fashion & Apparel</title>
+    <link rel="stylesheet" href="indeks.css">
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+</head>
+<body>
+
+    <header class="header">
+        <div class="logo">AURA<span>.</span></div>
+        <nav class="nav-menu">
+            <a href="#" class="active">Головна</a>
+            <a href="#catalog">Каталог</a>
+            <a href="#about">Про нас</a>
+        </nav>
+        <div class="header-actions">
+            <div class="search-box">
+                <i class='bx bx-search'></i>
+                <input type="text" id="search-input" placeholder="Пошук одягу..." onkeyup="filterProducts()">
+            </div>
+            <button class="icon-btn cart-trigger" onclick="toggleCart()">
+                <i class='bx bx-shopping-bag'></i>
+                <span class="badge" id="cart-count">0</span>
+            </button>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <span class="tag">New Season 2026</span>
+            <h1>Мінімалізм та комфорт у кожній деталі</h1>
+            <p>Відкрийте нову колекцію преміального базового одягу</p>
+            <a href="#catalog" class="btn-primary">Переглянути каталог</a>
+        </div>
+    </section>
+
+    <section class="features">
+        <div class="feature-item">
+            <i class='bx bx-truck'></i>
+            <div>
+                <h4>Швидка доставка</h4>
+                <p>1-2 дні по всій Україні</p>
+            </div>
+        </div>
+        <div class="feature-item">
+            <i class='bx bx-refresh'></i>
+            <div>
+                <h4>Легкий обмін</h4>
+                <p>14 днів на повернення</p>
+            </div>
+        </div>
+        <div class="feature-item">
+            <i class='bx bx-shield-alt-2'></i>
+            <div>
+                <h4>Гарантія якості</h4>
+                <p>100% оригінальні тканини</p>
+            </div>
+        </div>
+    </section>
+
+    <main class="container" id="catalog">
+        <div class="section-title">
+            <h2>Популярні моделі</h2>
+            <p>Обирайте найкраще з нашого асортименту</p>
+        </div>
+
+        <div class="categories">
+            <button class="cat-btn active" onclick="filterCategory('all')">Усе</button>
+            <button class="cat-btn" onclick="filterCategory('outerwear')">Верхній одяг</button>
+            <button class="cat-btn" onclick="filterCategory('hoodies')">Худі та світшоти</button>
+            <button class="cat-btn" onclick="filterCategory('tshirts')">Футболки</button>
+            <button class="cat-btn" onclick="filterCategory('pants')">Штани</button>
+        </div>
+
+        <div class="product-grid" id="product-grid">
+        </div>
+    </main>
+
+    <div class="cart-sidebar" id="cart-sidebar">
+        <div class="cart-header">
+            <h3>Ваш кошик</h3>
+            <button class="close-btn" onclick="toggleCart()">&times;</button>
+        </div>
+        <div class="cart-body" id="cart-items">
+            <p class="empty-msg">Ваш кошик порожній</p>
+        </div>
+        <div class="cart-footer">
+            <div class="total-price">
+                <span>Всього:</span>
+                <span id="cart-total-sum">0 грн</span>
+            </div>
+            <button class="btn-primary checkout-btn" onclick="checkout()">Оформити замовлення</button>
+        </div>
+    </div>
+    <div class="overlay" id="overlay" onclick="toggleCart()"></div>
+
+    <footer class="footer" id="about">
+        <div class="footer-container">
+            <div class="footer-col">
+                <div class="logo white">AURA<span>.</span></div>
+                <p>Бренд сучасного одягу для тих, хто цінує якість та стиль.</p>
+            </div>
+            <div class="footer-col">
+                <h4>Навігація</h4>
+                <a href="#catalog">Каталог</a>
+                <a href="#about">Про нас</a>
+                <a href="#">Доставка і оплата</a>
+            </div>
+            <div class="footer-col">
+                <h4>Контакти</h4>
+                <p>kakulapavlo@gmail.com</p>
+                <p>+380 96 063 5366</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 AURA Store. Всі права захищені.</p>
+        </div>
+    </footer>
+
+    <script src="indeks.js"></script>
+</body>
+</html>
