@@ -1,53 +1,69 @@
 
-.logo {
-    width: 200px;
-    height: 150px;
-}
-header {
-    background-color: white;
+* {
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
-    padding: 20px 110px;
-    height: 100px;
+}
+
+.hero {
+    height: 600px;
+
+    background-image: url("https://images.unsplash.com/photo-1558769132-cb1aea458c5e?q=80&w=1074&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+    background-size: cover;
+    background-position: center;
+
     display: flex;
     align-items: center;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05); 
-}
-.menu {
-    display: flex;
-    flex-direction: row;
-    flex-grow: 1;
-    justify-content: flex-end;
-    align-items: center;
-    list-style: none;
-    gap: 40px;
-}
-.menu-elements {
-    text-decoration: none;
-    font-weight: 500;
-    font-size: 18px;
-    line-height: 93%;
-    text-transform: uppercase;
-    color: #000;
+    padding-left: 100px;
+
     position: relative;
-    padding-bottom: 4px;
-    transition: color 0.3s ease;
 }
 
-.menu-elements::after {
-    content: '';
+/* Затемнення фону */
+.hero::before {
+    content: "";
     position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 0;
-    height: 2px;
-    background-color: #645fd3;
-    transition: width 0.3s ease;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.35);
 }
 
-.menu-elements:hover {
-    color: #645fd3;
+.hero-content {
+    position: relative;
+    z-index: 1;
+
+    max-width: 550px;
+    color: white;
 }
 
-.menu-elements:hover::after {
-    width: 100%;
+.hero-content h1 {
+    font-size: 56px;
+    line-height: 1.1;
+    margin-bottom: 20px;
+}
+
+.hero-content p {
+    font-size: 20px;
+    line-height: 1.5;
+    margin-bottom: 30px;
+}
+
+.hero-button {
+    display: inline-block;
+
+    padding: 15px 30px;
+
+    background: white;
+    color: black;
+
+    text-decoration: none;
+    font-size: 17px;
+    font-weight: bold;
+
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+.hero-button:hover {
+    background: black;
+    color: white;
 }
