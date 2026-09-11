@@ -1,68 +1,32 @@
 <!DOCTYPE html>
-<html lang="uk">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Clothing shop</title>
-
-    <link rel="stylesheet" href="index.css">
+    <title>AURA — Premium Fashion & Apparel</title>
+    <link rel="stylesheet" href="./catalog.css">
+    <link rel="stylesheet" href="./index.css">
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
 </head>
-
 <body>
-
-<header>
-    <img class="logo" src="./image/logo.png" alt="Clothes Store">
-
-    <ul class="menu">
-        <li><a class="menu-elements" href="#">Головна</a></li>
-        <li><a class="menu-elements" href="#">Товари</a></li>
-        <li><a class="menu-elements" href="#">Контакти</a></li>
-    </ul>
-</header>
-
-<main>
-    <div class="hero-section">
-        <h1 class="cta-title">Стильний одяг для тебе.</h1>
-        <button class="cta-button">Переглянути каталог</button>
-    </div>
-
-    <div class="products-section">
-        <h2 class="products-title">Хіти продажів</h2>
-
-        <div class="products-cards">
+    <header class="header">
+        <div class="logo">AURA<span>.</span></div>
+        <nav class="nav-menu">
+            <a href="#" class="active">Головна</a>
+            <a href="./catalog.html">Каталог</a>
+            <a href="./catalog.html#about">Про нас</a>
+        </nav>
+        <div class="header-actions">
+            <div class="search-box">
+                <i class='bx bx-search'></i>
+                <input type="text" id="search-input" placeholder="Пошук одягу..." onkeyup="filterProducts()">
+            </div>
+            <button class="icon-btn cart-trigger" onclick="toggleCart()">
+                <i class='bx bx-shopping-bag'></i>
+                <span class="badge" id="cart-count">0</span>
+            </button>
         </div>
-    </div>
-
-    <div class="contact-section">
-        <h2 class="contact-text">Не знайшли те, що хотіли?</h2>
-
-        <img src="contact-img.png" alt="" class="contact-img">
-
-        <form class="contact-form">
-            <input class="input-phone" type="tel" placeholder="Ваш номер телефону">
-            <button class="submit-button" type="submit">Зателефонуйте</button>
-        </form>
-    </div>
-</main>
-
-<footer>
-    <img src="./image/logo.png" alt="Clothes Store" class="logo">
-
-    <div class="footer-menu">
-        <div class="vert-menu">
-            <h3 class="footer-elements-first">Контакти</h3>
-            <a href="#" class="footer-elements">+38 (044) 123-45-67</a>
-            <a href="#" class="footer-elements">info@clothes-store.ua</a>
-        </div>
-
-        <div class="vert-menu">
-            <h3 class="footer-elements-first">Соціальні мережі</h3>
-            <a href="#" class="footer-elements">Instagram</a>
-            <a href="#" class="footer-elements">YouTube</a>
-        </div>
-    </div>
-</footer>
-
+    </header>
+    
 </body>
-<script src="index.js"> </script>
 </html>
