@@ -67,3 +67,14 @@
     background: black;
     color: white;
 }
+
+.element_prodazhiv {
+    background-color: rgb(255, 254, 254);
+    color: black;
+    padding-bottom: 222px;
+    text-align: center;
+    padding-top: 22px;
+    text-decoration: double;
+    
+}
+
