@@ -178,14 +178,86 @@ const products = [
         price: 580,
         image: "image/Y2KCasualHoodie.avif"
     },
+    {
+        id: 28,
+        name: "Dragon Print Men's",
+        category: "hoodies",
+        categoryName: "Худі та світшоти",
+        price: 670,
+        image: "image/DragonPrintMens.avif"
+    },
+    {
+        id: 29,
+        name: "Men's Cherry Blossom",
+        category: "hoodies",
+        categoryName: "Худі та світшоти",
+        price: 490,
+        image: "image/MensCherryBlossom.avif"
+    },
     //Верхній одяг
     {
         id: 1,
-        name: "Куртка Oversize Minimal",
+        name: "Color-Block Line Loose",
         category: "outerwear",
         categoryName: "Верхній одяг",
-        price: 3200,
-        image: "https://images.unsplash.com/photo-1551028719-00167b16eac5?auto=format&fit=crop&w=600&q=80"
+        price: 1070,
+        image: "image/ColorBlockLineLoose.avif"
+    },
+    {
+        id: 30,
+        name: "Jacket Colorblocked Patchwork",
+        category: "outerwear",
+        categoryName: "Верхній одяг",
+        price: 1150,
+        image: "image/JacketColorblockedPatchwork.avif"
+    },
+    {
+        id: 31,
+        name: "Men'S Loose Graffiti Pattern",
+        category: "outerwear",
+        categoryName: "Верхній одяг",
+        price: 1200,
+        image: "image/MensLooseGraffitiPattern.avif"
+    },
+    {
+        id: 32,
+        name: "Jacket with Drawstring Hem",
+        category: "outerwear",
+        categoryName: "Верхній одяг",
+        price: 1340,
+        image: "image/JacketwithDrawstringHem.avif"
+    },
+    {
+        id: 33,
+        name: "Jacket Coat",
+        category: "outerwear",
+        categoryName: "Верхній одяг",
+        price: 1450,
+        image: "image/JacketCoat.avif"
+    },
+    {
+        id: 34,
+        name: "Jacket Vintage",
+        category: "outerwear",
+        categoryName: "Верхній одяг",
+        price: 1550,
+        image: "image/JacketVintage.avif"
+    },
+    {
+        id: 35,
+        name: "AURA STORM",
+        category: "outerwear",
+        categoryName: "Верхній одяг",
+        price: 1370,
+        image: "image/AURASTORMS.png"
+    },
+    {
+        id: 36,
+        name: "AURA STORM OLIVE",
+        category: "outerwear",
+        categoryName: "Верхній одяг",
+        price: 1420,
+        image: "image/AURASTORMOLIVE.png"
     },
 
     
