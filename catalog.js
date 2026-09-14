@@ -1,5 +1,160 @@
-// База даних товарів
 const products = [
+    // Штани 
+    {
+        id: 4,
+        name: "Baggy джинси ",
+        category: "pants",
+        categoryName: "Штани",
+        price: 1445,
+        image: "image/baggy.webp"
+    },
+    {
+        id: 5,
+        name: "Baggy джинси жіночі ",
+        category: "pants",
+        categoryName: "Штани",
+        price: 850,
+        image: "image/baggy2.webp"
+    },
+    {
+        id: 6,
+        name: "Спортивні чоловічі широкі ",
+        category: "pants",
+        categoryName: "Штани",
+        price: 400,
+        image: "image/sport.avif"
+    },
+    {
+        id: 7,
+        name: "AURA Eclipse Cargo ",
+        category: "pants",
+        categoryName: "Штани",
+        price: 900,
+        image: "image/EclipseCargo1.png"
+    },
+    {
+        id: 8,
+        name: "AURA Mist Wide",
+        category: "pants",
+        categoryName: "Штани",
+        price: 1099,
+        image: "image/MistWide.png"
+    },
+    {
+        id: 9,
+        name: "AURA Forest Cargo",
+        category: "pants",
+        categoryName: "Штани",
+        price: 1100,
+        image: "image/ForestCargo.png"
+    },
+    {
+        id: 10,
+        name: "Gothic pants",
+        category: "pants",
+        categoryName: "Штани",
+        price: 799,
+        image: "image/Gothicpants.avif"
+    },
+    {
+        id: 11,
+        name: "Fallen angel's trousers",
+        category: "pants",
+        categoryName: "Штани",
+        price: 899,
+        image: "image/Fallenangelstrousers.avif"
+    },
+    //футболки
+    {
+        id : 14,
+        name: "Y2K Uglyfacekid",
+        category: "tshirts",
+        categoryName: "Футболки",
+        price: 479,
+        image: "image/Y2KUglyfacekid.avif"
+    },
+    {
+        id : 15,
+        name: "Japan Sakura",
+        category: "tshirts",
+        categoryName: "Футболки",
+        price: 287,
+        image: "image/JapanSakura.avif"
+    },
+    {
+        id : 16,
+        name: "Y2K Nick",
+        category: "tshirts",
+        categoryName: "Футболки",
+        price: 492,
+        image: "image/Y2KNick.avif"
+    },
+    {
+        id : 17,
+        name: "Discipline T-shirt",
+        category: "tshirts",
+        categoryName: "Футболки",
+        price: 297,
+        image: "image/DisciplineTshirt.avif"
+    },
+    {
+        id : 18,
+        name: "Short-Sleeve T-Shirt",
+        category: "tshirts",
+        categoryName: "Футболки",
+        price: 290,
+        image: "image/ShortSleeveTShirt.avif"
+    },
+    {
+        id : 19,
+        name: "Aura Moon Sakuka",
+        category: "tshirts",
+        categoryName: "Футболки",
+        price: 420,
+        image: "image/AURASakuraTshirt.png"
+    },
+    {
+        id : 20,
+        name: "T-shirt Nun",
+        category: "tshirts",
+        categoryName: "Футболки",
+        price: 890,
+        image: "image/TshirtNun.webp"
+    },
+    {
+        id : 21,
+        name: "T-shirt Homer Simpson",
+        category: "tshirts",
+        categoryName: "Футболки",
+        price: 690,
+        image: "image/Gomer.png"
+    },
+    //Худі та світшоти
+    {
+        id: 22,
+        name: "AURA Shadow Essential Hoodie",
+        category: "hoodies",
+        categoryName: "Худі та світшоти",
+        price: 1950,
+        image: "image/AURAShadowEssentialHoodie.png"
+    },
+    {
+        id: 23,
+        name: "AURA Soft Touch Hoodie",
+        category: "hoodies",
+        categoryName: "Худі та світшоти",
+        price: 2199,
+        image: "image/AURASoftTouchHoodie.png"
+    },
+    {
+        id: 24,
+        name: "Худі Beige Essential",
+        category: "hoodies",
+        categoryName: "Худі та світшоти",
+        price: 1950,
+        image: "https://images.unsplash.com/photo-1556905055-8f358a7a47b2?auto=format&fit=crop&w=600&q=80"
+    },
+    //Верхній одяг
     {
         id: 1,
         name: "Куртка Oversize Minimal",
@@ -8,51 +163,13 @@ const products = [
         price: 3200,
         image: "https://images.unsplash.com/photo-1551028719-00167b16eac5?auto=format&fit=crop&w=600&q=80"
     },
-    {
-        id: 2,
-        name: "Футболка Heavy Cotton White",
-        category: "tshirts",
-        categoryName: "Футболки",
-        price: 850,
-        image: "https://images.unsplash.com/photo-1521572267360-ee0c2909d518?auto=format&fit=crop&w=600&q=80"
-    },
-    {
-        id: 3,
-        name: "Худі Beige Essential",
-        category: "hoodies",
-        categoryName: "Худі та світшоти",
-        price: 1950,
-        image: "https://images.unsplash.com/photo-1556905055-8f358a7a47b2?auto=format&fit=crop&w=600&q=80"
-    },
-    {
-        id: 4,
-        name: "Джинси Wide Leg Denim",
-        category: "pants",
-        categoryName: "Штани",
-        price: 2400,
-        image: "https://images.unsplash.com/photo-1541099649105-f69ad21f3246?auto=format&fit=crop&w=600&q=80"
-    },
-    {
-        id: 5,
-        name: "Пальто Шерстяне Double",
-        category: "outerwear",
-        categoryName: "Верхній одяг",
-        price: 5400,
-        image: "https://images.unsplash.com/photo-1539533018447-63fcce2678e3?auto=format&fit=crop&w=600&q=80"
-    },
-    {
-        id: 6,
-        name: "Світшот Monochrome Black",
-        category: "hoodies",
-        categoryName: "Худі та світшоти",
-        price: 1650,
-        image: "https://images.unsplash.com/photo-1620799140408-edc6dcb6d633?auto=format&fit=crop&w=600&q=80"
-    }
+
+    
 ];
 
 let cart = [];
 
-// Рендер каталогу товарів
+
 function renderProducts(itemsToRender = products) {
     const grid = document.getElementById("product-grid");
     grid.innerHTML = "";
@@ -84,7 +201,6 @@ function renderProducts(itemsToRender = products) {
     });
 }
 
-// Фільтрація за категоріями
 function filterCategory(cat) {
     document.querySelectorAll('.cat-btn').forEach(btn => btn.classList.remove('active'));
     event.target.classList.add('active');
@@ -97,14 +213,14 @@ function filterCategory(cat) {
     }
 }
 
-// Пошук
+
 function filterProducts() {
     const query = document.getElementById("search-input").value.toLowerCase();
     const filtered = products.filter(p => p.name.toLowerCase().includes(query));
     renderProducts(filtered);
 }
 
-// Управління кошиком
+
 function addToCart(productId) {
     const product = products.find(p => p.id === productId);
     cart.push(product);
