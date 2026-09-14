@@ -148,11 +148,35 @@ const products = [
     },
     {
         id: 24,
-        name: "Худі Beige Essential",
+        name: "Men's Y2K-Style Dark Gothic",
         category: "hoodies",
         categoryName: "Худі та світшоти",
-        price: 1950,
-        image: "https://images.unsplash.com/photo-1556905055-8f358a7a47b2?auto=format&fit=crop&w=600&q=80"
+        price: 750,
+        image: "image/MensY2KStyleDarkGothic.avif"
+    },
+    {
+        id: 25,
+        name: "Men'S Street INS",
+        category: "hoodies",
+        categoryName: "Худі та світшоти",
+        price: 650,
+        image: "image/MensStreetINS.avif"
+    },
+    {
+        id: 26,
+        name: "Trendy Color-Block Round",
+        category: "hoodies",
+        categoryName: "Худі та світшоти",
+        price: 570,
+        image: "image/TrendyColorBlockRound.avif"
+    },
+    {
+        id: 27,
+        name: "Y2K Casual Hoodie",
+        category: "hoodies",
+        categoryName: "Худі та світшоти",
+        price: 580,
+        image: "image/Y2KCasualHoodie.avif"
     },
     //Верхній одяг
     {
