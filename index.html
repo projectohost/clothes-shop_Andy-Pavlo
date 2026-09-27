@@ -8,6 +8,9 @@
     <link rel="stylesheet" href="./catalog.css">
     <link rel="stylesheet" href="./index.css">
     <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
 
 <body>
@@ -29,6 +32,24 @@
             </button>
         </div>
     </header>
+
+    <aside class="cart-drawer" id="cart-drawer">
+        <div class="cart-drawer-head">
+            <h3>Кошик</h3>
+            <button class="icon-btn" onclick="toggleCart()"><i class='bx bx-x'></i></button>
+        </div>
+        <div class="cart-items" id="cart-items">
+            <p class="cart-empty">Кошик поки порожній.</p>
+        </div>
+        <div class="cart-drawer-foot">
+            <div class="cart-total-row">
+                <span>Разом</span>
+                <span id="cart-total">0 ₴</span>
+            </div>
+            <button class="hero-button cart-checkout">Оформити замовлення</button>
+        </div>
+    </aside>
+    <div class="cart-overlay" id="cart-overlay" onclick="toggleCart()"></div>
     <section class="hero">
         <div class="hero-content">
             <h1>Стиль, який підкреслює тебе</h1>
@@ -38,10 +59,121 @@
 
         </div>
     </section>
-            <section class="element_prodazhiv">
+            <section class="element_prodazhiv" id="catalog">
             <div class="elemetuk">
                 <h2>ХІТ ПРОДАЖІВ 2026 РОКУ</h2>
-                
+                <p class="section-sub">Речі, які розкупили швидше за все — поки вони ще в наявності.</p>
+            </div>
+
+            <div class="product-grid">
+                <article class="product-card" data-name="Бомбер Onyx">
+                    <div class="product-media">
+                        <img src="https://images.unsplash.com/photo-HzM9X0lxT9E?q=80&w=800&auto=format&fit=crop" alt="Бомбер Onyx" loading="lazy">
+                        <span class="product-tag">Хіт</span>
+                        <button class="product-add" onclick="addToCart('Бомбер Onyx', 2450)" aria-label="Додати в кошик">
+                            <i class='bx bx-plus'></i>
+                        </button>
+                    </div>
+                    <div class="product-info">
+                        <h3>Бомбер Onyx</h3>
+                        <p class="product-desc">Чорний, щільна тканина, оверсайз крій</p>
+                        <span class="product-price">2 450 ₴</span>
+                    </div>
+                </article>
+
+                <article class="product-card" data-name="Сукня Aria">
+                    <div class="product-media">
+                        <img src="https://images.unsplash.com/photo-Edxk9S1Du8Q?q=80&w=800&auto=format&fit=crop" alt="Сукня Aria" loading="lazy">
+                        <button class="product-add" onclick="addToCart('Сукня Aria', 1980)" aria-label="Додати в кошик">
+                            <i class='bx bx-plus'></i>
+                        </button>
+                    </div>
+                    <div class="product-info">
+                        <h3>Сукня Aria</h3>
+                        <p class="product-desc">Біла, легка тканина, вільний силует</p>
+                        <span class="product-price">1 980 ₴</span>
+                    </div>
+                </article>
+
+                <article class="product-card" data-name="Костюм Milano">
+                    <div class="product-media">
+                        <img src="https://images.unsplash.com/photo-lDnaOcsXzx4?q=80&w=800&auto=format&fit=crop" alt="Костюм Milano" loading="lazy">
+                        <span class="product-tag">Новинка</span>
+                        <button class="product-add" onclick="addToCart('Костюм Milano', 3620)" aria-label="Додати в кошик">
+                            <i class='bx bx-plus'></i>
+                        </button>
+                    </div>
+                    <div class="product-info">
+                        <h3>Костюм Milano</h3>
+                        <p class="product-desc">Чорний, приталений, класичний крій</p>
+                        <span class="product-price">3 620 ₴</span>
+                    </div>
+                </article>
+
+                <article class="product-card" data-name="Сумка Vela">
+                    <div class="product-media">
+                        <img src="https://images.unsplash.com/photo-2bPimrz-Lgo?q=80&w=800&auto=format&fit=crop" alt="Сумка Vela" loading="lazy">
+                        <button class="product-add" onclick="addToCart('Сумка Vela', 1750)" aria-label="Додати в кошик">
+                            <i class='bx bx-plus'></i>
+                        </button>
+                    </div>
+                    <div class="product-info">
+                        <h3>Сумка Vela</h3>
+                        <p class="product-desc">Коричнева шкіра, ручна робота</p>
+                        <span class="product-price">1 750 ₴</span>
+                    </div>
+                </article>
+            </div>
+
+            <a href="./catalog.html" class="view-all-link">Переглянути весь каталог <i class='bx bx-right-arrow-alt'></i></a>
+        </section>
+
+        <section class="categories">
+            <div class="category-grid">
+                <a href="./catalog.html?category=women" class="category-card">
+                    <img src="https://images.unsplash.com/photo-1616313253719-c46514cddee1?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Жіночий одяг" loading="lazy">
+                    <span class="category-label">Жіноче</span>
+                </a>
+                <a href="./catalog.html?category=men" class="category-card">
+                    <img src="https://images.unsplash.com/photo-1618001789159-ffffe6f96ef2?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Чоловічий одяг" loading="lazy">
+                    <span class="category-label">Чоловіче</span>
+                </a>
+                <a href="./catalog.html?category=accessories" class="category-card">
+                    <img src="https://images.unsplash.com/photo-1655255114527-d0a834d9a774?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Аксесуари" loading="lazy">
+                    <span class="category-label">Аксесуари</span>
+                </a>
+            </div>
+        </section>
+
+        <section class="usp">
+            <div class="usp-grid">
+                <div class="usp-item">
+                    <i class='bx bx-package'></i>
+                    <h4>Доставка по всій Україні</h4>
+                    <p>Нова пошта та кур'єром — 1-3 дні по Україні.</p>
+                </div>
+                <div class="usp-item">
+                    <i class='bx bx-shield-quarter'></i>
+                    <h4>Перевірена якість</h4>
+                    <p>Кожна річ проходить контроль перед відправкою.</p>
+                </div>
+                <div class="usp-item">
+                    <i class='bx bx-refresh'></i>
+                    <h4>Обмін і повернення</h4>
+                    <p>14 днів на повернення, якщо річ не підійшла.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="newsletter">
+            <div class="newsletter-inner">
+                <h2>Перші дізнавайтесь про нові колекції</h2>
+                <p>Знижки, дропи лімітованих серій і закриті розпродажі — прямо на пошту.</p>
+                <form class="newsletter-form" onsubmit="return subscribeNewsletter(event)">
+                    <input type="email" required placeholder="Ваша пошта" aria-label="Email">
+                    <button type="submit">Підписатись</button>
+                </form>
+                <p class="newsletter-note" id="newsletter-note"></p>
             </div>
         </section>
     <footer class="footer" id="about">
@@ -78,6 +210,69 @@
         </div>
     </footer>
 
+    <script>
+        let cart = [];
+
+        function toggleCart() {
+            document.getElementById('cart-drawer').classList.toggle('open');
+            document.getElementById('cart-overlay').classList.toggle('open');
+        }
+
+        function addToCart(name, price) {
+            cart.push({ name, price });
+            renderCart();
+            const drawer = document.getElementById('cart-drawer');
+            const overlay = document.getElementById('cart-overlay');
+            if (!drawer.classList.contains('open')) {
+                drawer.classList.add('open');
+                overlay.classList.add('open');
+            }
+        }
+
+        function removeFromCart(index) {
+            cart.splice(index, 1);
+            renderCart();
+        }
+
+        function renderCart() {
+            document.getElementById('cart-count').textContent = cart.length;
+            const itemsEl = document.getElementById('cart-items');
+            const totalEl = document.getElementById('cart-total');
+
+            if (cart.length === 0) {
+                itemsEl.innerHTML = '<p class="cart-empty">Кошик поки порожній.</p>';
+                totalEl.textContent = '0 ₴';
+                return;
+            }
+
+            itemsEl.innerHTML = cart.map((item, i) => `
+                <div class="cart-item">
+                    <span>${item.name}</span>
+                    <span>${item.price.toLocaleString('uk-UA')} ₴</span>
+                    <button onclick="removeFromCart(${i})" aria-label="Видалити"><i class='bx bx-x'></i></button>
+                </div>
+            `).join('');
+
+            const total = cart.reduce((sum, item) => sum + item.price, 0);
+            totalEl.textContent = total.toLocaleString('uk-UA') + ' ₴';
+        }
+
+        function filterProducts() {
+            const query = document.getElementById('search-input').value.trim().toLowerCase();
+            document.querySelectorAll('.product-card').forEach(card => {
+                const name = card.dataset.name.toLowerCase();
+                card.style.display = name.includes(query) ? '' : 'none';
+            });
+        }
+
+        function subscribeNewsletter(event) {
+            event.preventDefault();
+            const note = document.getElementById('newsletter-note');
+            note.textContent = 'Дякуємо! Перевірте пошту, щоб підтвердити підписку.';
+            event.target.reset();
+            return false;
+        }
+    </script>
 </body>
 
-</html>
+</html> 
